@@ -26,5 +26,9 @@ public class BookService {
     public List<Book> getAllBooks() {
         return booksDB.getAllBooks();
     }
+
+    public Book getBookById(long id) {
+        return booksDB.getBookById(id);
+    }
 }
 

@@ -17,6 +17,16 @@ import java.util.List;
 public class BooksDB {
     ArrayList<Book> booksList= new ArrayList<>();
 
+    public Book getBookById(long id) {
+        for (Book book : booksList) {
+            if(book.getId()==id){
+                return book;
+            }
+        }
+        return null;
+    }
+
+
     public String insertBook(Book book){
         for (Book book1 : booksList) {
             if(book1.getId()==book.getId()){
