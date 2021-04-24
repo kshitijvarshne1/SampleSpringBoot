@@ -7,6 +7,11 @@
 
 package com.example.BookCatalogSystem.Model;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter // Aspect Oriented Programming
+@Setter // Aspect Oriented programming
 public class Book {
     private long id;
     private String name;
