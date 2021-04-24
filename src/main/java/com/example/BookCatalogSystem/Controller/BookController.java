@@ -7,6 +7,20 @@
 
 package com.example.BookCatalogSystem.Controller;
 
+import com.example.BookCatalogSystem.Model.Book;
+import com.example.BookCatalogSystem.Service.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 public class BookController {
+
+    @Autowired
+    BookService bookService;
+    // Insert the book
+    @PostMapping("/insertBook")
+    public String insertBook(@RequestBody Book book){
+        return bookService.insertBook(book);
+    }
 }
 
