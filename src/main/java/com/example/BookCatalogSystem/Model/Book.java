@@ -22,5 +22,15 @@ public class Book {
         this.name = name;
         this.cost = cost;
     }
+
+    @Override
+    public String toString() {
+        return "Book { " +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", cost=" + cost +
+                '}'+'\n';
+    }
+
 }
 
