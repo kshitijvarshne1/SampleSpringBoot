@@ -15,30 +15,30 @@ import java.util.List;
 
 @Repository
 public class BooksDB {
-    ArrayList<Book> booksList= new ArrayList<>();
+    ArrayList<Book> booksList = new ArrayList<>();
 
-    public Book getBookById(long id) {
-        for (Book book : booksList) {
-            if(book.getId()==id){
-                return book;
-            }
-        }
-        return null;
-    }
-
-    public String insertBook(Book book){
-        for (Book book1 : booksList) {
-            if(book1.getId()==book.getId()){
-                return "Id exist already";
+    public String saveBook(Book book) {
+        for (Book books : booksList) {
+            if (books.getId() == book.getId()) {
+                return "Not able to store the book";
             }
         }
         booksList.add(book);
-        System.out.println(book);
-        return "Book added successfully";
+        System.out.println(book + " is  inserted");
+        return "Able to store the book";
     }
 
-    public List<Book> getAllBooks() {
+    public List<Book> getBooks() {
         return booksList;
+    }
+
+    public Book getBookById(long id) {
+        for (Book books : booksList) {
+            if (books.getId() == id) {
+                return books;
+            }
+        }
+        return null;
     }
 }
 

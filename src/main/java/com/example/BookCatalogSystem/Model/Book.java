@@ -14,22 +14,22 @@ import lombok.Setter;
 @Setter // Aspect Oriented programming
 public class Book {
     private long id;
-    private String name;
+    private String authorName;
     private int cost;
 
-    public Book(long id, String name, int cost) {
+    public Book(long id, String authorName, int cost) {
         this.id = id;
-        this.name = name;
+        this.authorName = authorName;
         this.cost = cost;
     }
 
     @Override
     public String toString() {
-        return "Book { " +
+        return "Book{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", authorName='" + authorName + '\'' +
                 ", cost=" + cost +
-                '}'+'\n';
+                '}' + '\n';
     }
 }
 

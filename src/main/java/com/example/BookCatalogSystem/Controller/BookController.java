@@ -19,21 +19,21 @@ public class BookController {
     @Autowired
     BookService bookService;
 
-    // Insert the book
+    //@ApiOperation("This endpoint is for inserting the books")
     @PostMapping("/insertBook")
     public String insertBook(@RequestBody Book book) {
         return bookService.insertBook(book);
     }
 
-    // Show all books
     @GetMapping("/getAllBooks")
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }
 
-    @GetMapping("/getBookById{id}")
+    @GetMapping("/getBookById/{id}")
     public Book getBookById(@PathVariable long id) {
         return bookService.getBookById(id);
     }
+
 }
 
